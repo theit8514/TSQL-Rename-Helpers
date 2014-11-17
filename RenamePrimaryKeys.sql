@@ -12,6 +12,7 @@ FOR
 	where b.name <> 'sysdiagrams'
 	and b.type = 'U'
 	AND [kc].[type] = 'PK'
+	AND [sc].[name] <> 'tSQLt'
 
 OPEN constraint_cursor
 FETCH NEXT FROM constraint_cursor INTO @TableName, @ConstraintName, @SchemaName
